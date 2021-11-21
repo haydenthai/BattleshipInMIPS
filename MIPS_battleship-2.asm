@@ -8,8 +8,8 @@
 
 	#STRINGS
 	welcome: 			.asciiz 		"======================================================\nBATTLESHIP[5x5]\n======================================================\n\n\nBy Hayden Thai\n\n\n\n\tRules:\nA.     Battleship consists of 2 players. You and another player\nB.     You must manually input coordinates\nC.     There are 3 ships for each player. Each ship holds 1 cell\nD.     The game is played on a 3x3 grid until all of one's player's boats are             destroyed\nE.      If you hit a ship then you get to shoot again\nF.      You can not shoot in the same cell. The game is intended to be played by          these rules\n"
-	askRow: 				.asciiz 		"Enter row(0-4)\n"
-	askCol: 				.asciiz 		"Enter col(0-4)\n"
+	askRow: 			.asciiz 		"Enter row(0-4)\n"
+	askCol: 			.asciiz 		"Enter col(0-4)\n"
 	enterSeed: 			.asciiz 		"Enter seed:\n"
 	playerWins: 			.asciiz 		"=========\nPLAYER X WINS\n=========\nTotal shots: X \nHit/Miss Percent: %"	
 	playerStats: 			.asciiz 		"=========\nPLAYER X STAT\n=========\nTotal shots: X \nHit/Miss Percent: %"
@@ -17,8 +17,8 @@
 	playerOnesTurn: 		.asciiz 		"PLAYER ONE'S TURN"
 	playerTwosTurn: 		.asciiz 		"PLAYER TWO'S TURN"
 	newLine: 			.asciiz 		"\n"
-	HitMessage: 			.space 		50
-	MissMessage: 			.space 		50
+	HitMessage: 			.space 			50
+	MissMessage: 			.space 			50
 	
 	
 	#INT ARRAYS
@@ -26,13 +26,13 @@
 	numShips: 			.word 		5, 5 			# to access numships[1]  do baseAddr + 4 * index
 
 	#DOUBLE *used to calculate hit %"*
-	oneHunna: 			.double 		100
+	oneHunna: 			.double 	100
 
 	#GAMEBOARDS		
 	playerOneBoard: 		.space 		200
-	playerOneViewBoard: 	.space 		200		
+	playerOneViewBoard: 		.space 		200		
 	playerTwoBoard: 		.space 		200
-	playerTwoViewBoard: 	.space 		200
+	playerTwoViewBoard: 		.space 		200
 
 .text
 
